@@ -1,6 +1,6 @@
 package model.dao;
 
-//Classe auxiliar responsavel por instanciar os DAOS, tera operações estaticas para instanciar os DAOS
+//Classe auxiliar responsavel por instanciar os DAOS
 
 import db.DB;
 import model.dao.impl.SellerDaoJDBC;
