@@ -3,7 +3,6 @@ package application;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 import java.util.Scanner;
 
@@ -27,6 +26,13 @@ public class Program2 {
         dep.setName("beatriz");
         dp.update(dep);
         System.out.println("Update Completed!");
+
+        System.out.println("\n=== TESTE 6: department Delete ===");
+        System.out.print("Enter id for deleste test: ");
+        int id = input.nextInt();
+        input.nextLine();
+        dp.deleteById(id);
+        System.out.println("Delete Completed!");
 
     }
 }
