@@ -18,53 +18,59 @@ Durante o desenvolvimento, foram praticados conceitos fundamentais para a constr
 💻 IntelliJ IDEA
 🔧 Git e GitHub
 📚 Conceitos praticados
-Conexão com o banco de dados
+🔗 Conexão com o banco de dados
 
 Configuração e gerenciamento da conexão entre a aplicação Java e o MySQL.
 
-Operações CRUD
+🔄 Operações CRUD
 
-Implementação de operações para:
+Implementação das principais operações de persistência:
 
 INSERT — inserir registros
 SELECT — consultar registros
 UPDATE — atualizar registros
 DELETE — remover registros
-PreparedStatement
+🔐 PreparedStatement
 
 Utilização de PreparedStatement para executar comandos SQL parametrizados, trabalhando com placeholders (?) e evitando a construção direta de consultas com valores concatenados.
 
-Generated Keys
+🆔 Generated Keys
 
 Recuperação das chaves geradas automaticamente pelo banco após uma operação de inserção utilizando getGeneratedKeys().
 
-Padrão DAO
+🏗️ Padrão DAO
 
 Aplicação do padrão Data Access Object (DAO) para separar a lógica de acesso ao banco de dados das demais partes da aplicação.
 
 Essa separação ajuda a manter o código mais organizado e facilita futuras alterações na camada de persistência.
 
 📂 Estrutura do projeto
-src
-├── application
-│   └── Classes responsáveis pela execução da aplicação
+demo-dao-jdbc
 │
-├── db
-│   └── Classes responsáveis pela conexão e gerenciamento do banco
+├── src
+│   ├── application
+│   │   └── Classes responsáveis pela execução da aplicação
+│   │
+│   ├── db
+│   │   └── Classes responsáveis pela conexão com o banco
+│   │
+│   └── model
+│       ├── dao
+│       │   └── Interfaces e implementações dos DAOs
+│       │
+│       └── entities
+│           └── Classes que representam as entidades
 │
-└── model
-    ├── dao
-    │   └── Interfaces e implementações dos DAOs
-    │
-    └── entities
-        └── Classes que representam as entidades do sistema
-
-database
-└── coursejdbc.sql
-    └── Script para criação e configuração do banco de dados
-
-db.properties.example
-└── Exemplo de configuração da conexão com o banco
+├── database
+│   └── coursejdbc.sql
+│       └── Script para criação e configuração do banco
+│
+├── db.properties.example
+│   └── Exemplo de configuração da conexão
+│
+├── .gitignore
+├── pom.xml
+└── README.md
 🗃️ Banco de dados
 
 O projeto utiliza MySQL e trabalha principalmente com as entidades:
@@ -85,17 +91,19 @@ Esse script contém a estrutura necessária para criar o banco de dados, suas ta
 Dessa forma, quem clonar o projeto poderá configurar o banco de dados localmente sem precisar criar as tabelas manualmente.
 
 ⚙️ Como executar o projeto
-1. Clone o repositório
+1️⃣ Clone o repositório
 git clone https://github.com/Kallel-19/demo-dao-jdbc.git
-2. Crie o banco de dados
+2️⃣ Configure o banco de dados
 
-Abra o MySQL Workbench ou outro cliente MySQL e execute o script:
+Abra o MySQL Workbench ou outro cliente MySQL.
+
+Execute o arquivo:
 
 database/coursejdbc.sql
 
 O script será responsável por criar o banco coursejdbc, suas tabelas e os dados necessários para executar o projeto.
 
-3. Configure a conexão
+3️⃣ Configure a conexão
 
 O projeto disponibiliza um arquivo de exemplo:
 
@@ -112,9 +120,9 @@ password=SUA_SENHA
 dburl=jdbc:mysql://localhost:3306/coursejdbc
 useSSL=false
 
-⚠️ O arquivo db.properties contém informações de configuração local e não deve ser enviado ao GitHub. Por isso, ele está incluído no .gitignore.
+⚠️ Importante: o arquivo db.properties contém informações de configuração local e não deve ser enviado ao GitHub. Por isso, ele está incluído no .gitignore.
 
-4. Execute a aplicação
+4️⃣ Execute a aplicação
 
 Abra o projeto na sua IDE, configure o JDK e execute as classes presentes no pacote application.
 
@@ -150,13 +158,14 @@ Essa experiência serviu como base para meus estudos posteriores relacionados ao
 
 Continuar evoluindo meus conhecimentos em Java e desenvolvimento Back-End, avançando para tecnologias e conceitos como:
 
-Spring Boot
-Spring Data JPA
-APIs REST
-Persistência com JPA/Hibernate
-Arquitetura de aplicações
+🌱 Spring Boot
+🗄️ Spring Data JPA
+🔗 APIs REST
+💾 Persistência com JPA/Hibernate
+🏛️ Arquitetura de aplicações
+📌 Sobre o projeto
 
-📌 Projeto desenvolvido para fins educacionais e de estudo.
+Projeto desenvolvido para fins educacionais e de estudo, como parte da minha jornada de aprendizado em Java e desenvolvimento Back-End.
 
 🔗 Repositório:
 https://github.com/Kallel-19/demo-dao-jdbc
